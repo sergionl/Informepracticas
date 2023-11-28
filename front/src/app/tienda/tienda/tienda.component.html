@@ -1,0 +1,28 @@
+<div>
+  <h2>Lista de Tiendas</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Ubicación</th>
+        <th>Empleados</th>
+        <th>Celular de Contacto</th>
+        <th>Correo de Contacto</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tienda of tiendas">
+        <td>{{ tienda.id }}</td>
+        <td>{{ tienda.Ubicacion }}</td>
+        <td>{{ tienda.Empleados }}</td>
+        <td>{{ tienda.CelularContacto }}</td>
+        <td>{{ tienda.CorreoContacto }}</td>
+        <td>
+          <button (click)="navigateToInventario(tienda.id)">Ver Inventario</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button class="cerrar-sesion-button" (click)="cerrarSesion()">Cerrar Sesión</button>
+</div>

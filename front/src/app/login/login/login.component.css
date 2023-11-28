@@ -1,0 +1,55 @@
+/* login.component.css */
+
+
+  /* Estilos para el componente de login */
+
+/* Estilo para el contenedor principal */
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* Ajusta la altura para ocupar el 100% de la altura visible del viewport */
+  }
+  
+  /* Estilo para el formulario */
+  .login-form {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Estilo para los campos de entrada */
+  .login-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333; /* Texto negro */
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el botón de enviar */
+  .login-form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #3498db; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .login-form button:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+  }
+  

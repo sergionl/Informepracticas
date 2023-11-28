@@ -1,0 +1,52 @@
+<div>
+    <h2>Inventario</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Producto</th>
+          <th>Descripción</th>
+          <th>En Stock</th>
+          <th>Precio por unidad</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of inventario">
+          <td>{{ item.id }}</td>
+          <td>{{ item.Producto }}</td>
+          <td>{{ item.Descripcion }}</td>
+          <td>{{ item.Cantidad }}</td>
+          <td>{{ item.Precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <form (ngSubmit)="realizarVenta()" #ventaForm="ngForm">
+      <label for="cliente">Cliente:</label>
+      <input type="text" id="cliente" name="cliente" [(ngModel)]="cliente" required>
+  
+      <div *ngFor="let producto of productosEnVenta; let i = index">
+        <label for="producto">Producto {{ i + 1 }}:</label>
+        <select id="producto" name="producto" [(ngModel)]="producto.productoId" required>
+          <option *ngFor="let item of inventario" [value]="item.id">{{ item.Producto }}</option>
+        </select>
+  
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" [(ngModel)]="producto.cantidad" required>
+  
+        <button type="button" (click)="eliminarProducto(i)">Eliminar Producto</button>
+      </div>
+  
+      <button type="button" (click)="agregarProducto()">Agregar Producto</button>
+  
+      <button type="submit">Realizar Venta</button>
+    </form>
+
+    <div *ngIf="errorMessage" class="error-message">
+      {{ errorMessage }}
+    </div>
+    
+    <button (click)="regresarATiendas()">Regresar a Tiendas</button>
+    <button (click)="cerrarSesion()">Cerrar Sesión</button>
+  </div>
+  

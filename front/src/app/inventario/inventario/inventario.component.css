@@ -1,0 +1,94 @@
+
+
+h2 {
+    color: #333; /* Texto negro */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px; /* Ajuste el margen inferior según sea necesario */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #3498db; /* Azul */
+    color: #fff; /* Texto blanco */
+  }
+  
+  .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  button {
+    background-color: #3498db; /* Azul */
+    color: #fff; /* Texto blanco */
+    border: none;
+    padding: 5px 10px;
+    margin-left: 10px; /* Ajuste el margen izquierdo según sea necesario */
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+  }
+  
+  /* Estilos para el componente de inventario */
+
+h2 {
+  color: #333; /* Texto negro */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px; /* Ajuste el margen inferior según sea necesario */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+select, input {
+  margin-bottom: 10px;
+}
+
+button {
+  background-color: #3498db; /* Azul */
+  color: #fff; /* Texto blanco */
+  border: none;
+  padding: 5px 10px;
+  margin-left: 10px; /* Ajuste el margen izquierdo según sea necesario */
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+}
+
+.cerrar-sesion-button {
+  background-color: #3498db; /* Mismo azul que en el inventario */
+}
+
+.cerrar-sesion-button:hover {
+  background-color: #2980b9; /* Azul más oscuro al pasar el ratón */
+}
+
+.error-message {
+  color: #e74c3c; /* Rojo */
+  margin-top: 10px;
+}
